@@ -60,7 +60,9 @@ function stopInterval() {
 }
 function resetTheInterval(){
     clearInterval(interval);
-    arr.push(`${hour.innerText}-${minute.innerText}-${second.innerText}`)
+    if(Number(second.innerText) !== 0){
+        arr.push(`${hour.innerText}-${minute.innerText}-${second.innerText}`)
+    }
     
     hour.innerText = "00";
     minute.innerText = "00";
